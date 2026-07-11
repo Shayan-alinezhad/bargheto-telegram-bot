@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: گزارش آسیب‌پذیری امنیتی
+    url: https://github.com/Shayan-alinezhad/bargheto-telegram-bot/security
+    about: مشکلات امنیتی و اطلاعات حساس را در Issue عمومی منتشر نکنید.
