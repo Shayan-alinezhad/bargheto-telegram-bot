@@ -1,0 +1,87 @@
+name: گزارش باگ
+description: یک مشکل قابل تکرار در ربات، پنل مدیریت یا دریافت اطلاعات گزارش کنید.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        از گزارش دقیق شما متشکریم. لطفاً هیچ توکن، رمز عبور، Cookie یا اطلاعات شخصی را در Issue قرار ندهید.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: بخش مشکل‌دار
+      options:
+        - ربات تلگرام
+        - استخراج اطلاعات خاموشی
+        - پنل مدیریت
+        - دیتابیس D1
+        - Webhook و راه‌اندازی
+        - مستندات
+        - سایر موارد
+    validations:
+      required: true
+
+  - type: input
+    id: summary
+    attributes:
+      label: خلاصه مشکل
+      placeholder: "مثال: دکمه خاموشی‌های امروز نتیجه‌ای نمایش نمی‌دهد"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: مراحل بازتولید
+      description: مراحل را به‌ترتیب و با جزئیات بنویسید.
+      placeholder: |
+        1. دستور /start را ارسال کردم
+        2. شهر بابل را انتخاب کردم
+        3. روی خاموشی‌های امروز زدم
+        4. پیام خطا نمایش داده شد
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: نتیجه مورد انتظار
+      placeholder: انتظار داشتم فهرست خاموشی‌ها نمایش داده شود.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: نتیجه فعلی
+      placeholder: متن خطا یا رفتار فعلی را بدون اطلاعات حساس بنویسید.
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: محیط اجرا
+      placeholder: "مثال: Cloudflare Workers، مرورگر Firefox، موبایل Android"
+
+  - type: textarea
+    id: debug
+    attributes:
+      label: خروجی Debug یا Log
+      description: خروجی مرتبط را پس از حذف توکن‌ها، رمزها و اطلاعات شخصی قرار دهید.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: تأیید نهایی
+      options:
+        - label: آخرین نسخه پروژه را بررسی کرده‌ام.
+          required: true
+        - label: Issue مشابهی پیدا نکردم.
+          required: true
+        - label: هیچ توکن، رمز عبور یا اطلاعات شخصی در این گزارش وجود ندارد.
+          required: true
