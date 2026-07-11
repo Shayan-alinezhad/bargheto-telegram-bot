@@ -1,0 +1,66 @@
+name: پیشنهاد قابلیت جدید
+description: یک قابلیت یا بهبود جدید برای برق تو پیشنهاد دهید.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        از پیشنهاد شما متشکریم. لطفاً مسئله و ارزش قابلیت پیشنهادی را شفاف توضیح دهید.
+
+  - type: input
+    id: title
+    attributes:
+      label: عنوان قابلیت
+      placeholder: "مثال: ارسال اعلان پیش از شروع خاموشی"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: این قابلیت چه مسئله‌ای را حل می‌کند؟
+      placeholder: مشکل یا نیازی را که اکنون وجود دارد توضیح دهید.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: راه‌حل پیشنهادی
+      placeholder: رفتار مورد انتظار و نحوه استفاده کاربر را توضیح دهید.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: بخش مرتبط
+      options:
+        - ربات تلگرام
+        - اعلان‌ها
+        - جست‌وجو و فیلتر خاموشی
+        - پنل مدیریت
+        - دیتابیس D1
+        - رابط کاربری
+        - مستندات
+        - سایر موارد
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: راه‌حل‌های جایگزین
+      placeholder: اگر راه‌حل دیگری بررسی کرده‌اید، اینجا بنویسید.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: تأیید نهایی
+      options:
+        - label: Issue مشابهی را جست‌وجو کرده‌ام.
+          required: true
+        - label: این پیشنهاد شامل اطلاعات حساس نیست.
+          required: true
